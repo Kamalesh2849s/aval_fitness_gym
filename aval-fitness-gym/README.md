@@ -5,11 +5,11 @@ Pure HTML/CSS/JS. No build step.
 Open `index.html`, or run `python3 -m http.server 8000` and visit http://localhost:8000.
 
 ## Features
-5 pages, sticky nav with mobile menu, active-link styling, scroll reveal, gallery lightbox (Esc/click-outside close), validated demo contact form, map embed + directions, back-to-top, image fallbacks, reduced-motion support. The nav and footer are injected by `js/script.js`, so edit them there.
+5 pages, sticky nav with mobile menu, active-link styling, scroll reveal, gallery lightbox (Esc/click-outside close), validated demo contact form, back-to-top, image fallbacks, reduced-motion support. The nav and footer are injected by `js/script.js`, so edit them there.
 
 ## Update
 - Instagram: replace `href="#"` in `js/script.js` (marked TODO).
-- Phone/address: search for `63696` and `Anangur` across files.
+- Demo phone/address placeholders: update `contact.html` and the footer/contact confirmation in `js/script.js`.
 - Photos: see `images/README.md`.
 
 ## Deploy on GitHub Pages

@@ -3,7 +3,7 @@ const L=[["index.html","Home"],["services.html","Services"],["about.html","About
 const cur=location.pathname.split("/").pop()||"index.html";
 const links=L.map(([h,t])=>`<li><a href="${h}"${h===cur?' aria-current="page"':""}>${t}</a></li>`).join("");
 document.getElementById("site-header").innerHTML=`<nav class="wrap nav" aria-label="Main"><a class="logo" href="index.html">AVAL FITNESS &amp; GYM</a><button id="menu" aria-expanded="false" aria-controls="nl" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button><ul id="nl">${links}</ul></nav>`;
-document.getElementById("site-footer").innerHTML=`<div class="wrap fg"><div><a class="logo" href="index.html">AVAL FITNESS &amp; GYM</a><p>2nd Floor, KMS Complex, 319 Anangur Road,<br>Komarapalayam, Tamil Nadu 638183</p><p><a href="tel:+916369684611"><i class="fa-solid fa-phone"></i> +91 63696 84611</a></p></div><div><h3>Explore</h3><ul>${links}</ul></div><div><h3>Follow</h3><ul><li><!-- TODO: replace # with the verified official Instagram URL --><a href="#" aria-label="Instagram (link to be added)"><i class="fa-brands fa-instagram"></i> Instagram</a></li></ul></div></div><p class="copy">&copy; ${new Date().getFullYear()} Aval Fitness &amp; Gym</p>`;
+document.getElementById("site-footer").innerHTML=`<div class="wrap fg"><div><a class="logo" href="index.html">AVAL FITNESS &amp; GYM</a><p>Demo address (not a real location),<br>Komarapalayam, Tamil Nadu</p><p><i class="fa-solid fa-phone"></i> Demo mobile: +91 00000 00000</p></div><div><h3>Explore</h3><ul>${links}</ul></div><div><h3>Follow</h3><ul><li><!-- TODO: replace # with the verified official Instagram URL --><a href="#" aria-label="Instagram (link to be added)"><i class="fa-brands fa-instagram"></i> Instagram</a></li></ul></div></div><p class="copy">&copy; ${new Date().getFullYear()} Aval Fitness &amp; Gym</p>`;
 const hd=document.getElementById("site-header"),m=document.getElementById("menu"),nl=document.getElementById("nl"),top=document.getElementById("top");
 const close=()=>{nl.classList.remove("open");m.setAttribute("aria-expanded","false")};
 m.onclick=()=>m.setAttribute("aria-expanded",nl.classList.toggle("open"));
@@ -26,5 +26,5 @@ if(f){const R={n:v=>v.trim().length<2&&"Enter your name.",p:v=>!/^(\+91[\s-]?)?[
 f.onsubmit=e=>{e.preventDefault();let bad=0;
 for(const k in R){const i=f.elements[k],er=R[k](i.value);f.querySelector(`[data-for=${k}]`).textContent=er||"";i.classList.toggle("bad",!!er);i.setAttribute("aria-invalid",!!er);if(er&&!bad){i.focus();bad=1}}
 const ok=document.getElementById("ok");ok.hidden=!!bad;
-if(!bad){ok.textContent="Demo only: this form is not delivered anywhere without a backend. Please call +91 63696 84611 to enquire.";f.reset()}}}
+if(!bad){ok.textContent="Demo only: this form is not delivered anywhere without a backend. Demo mobile number: +91 00000 00000.";f.reset()}}}
 })();
